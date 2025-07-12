@@ -1,3 +1,7 @@
+# 🚀 IoT Field Training - Assignment 1 (Summer 2025)
+
+This repository contains implementations and documentation for **Assignment 1** of the **IoT Software & Hardware Engineering – Field Training** course. Below are the descriptions and requirements for Problems 2, 3, and 4.
+
 ## 🔢 Problem 3: Number Manipulation
 
 ### 🧾 Task Description
