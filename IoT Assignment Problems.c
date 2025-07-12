@@ -1,47 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-// int ReverseNumber(int number){
-//     int Reversed = 0;
-//     while(number != 0) {
-//         int digit = number % 10;
-//         Reversed = Reversed * 10 + digit;
-//         number /= 10;
-//     }
-//     return Reversed;
-// }
-
-// int isPrime(int number){
-//     if(number<1) return 1; // Treat 0 and 1 as prime for this context
-//     for (int i = 2; i * i <= number; i++) {if (number % i == 0) return 0;}
-//     return 1;
-// }
-
-// int countDigits(int number) {
-//     int count = 0;
-//     while (number != 0) {
-//         number /= 10;
-//         count++;
-//     }
-//     return count;
-// }
-
-// int main(void) {
-//     int number;
-//     printf("Enter a number: ");
-//     scanf("%d", &number);
-//     printf("Reversed number: %d\n", ReverseNumber(number));
-//     printf("Number of digits: %d\n", countDigits(number));
-//     if (isPrime(number)) {
-//         printf("The number %d is prime\n", number);
-//     } else {
-//         printf("The number %d is not prime\n", number);
-//     }
-//     return 0;
-// }
-
+#include <stdlib.h>
 // This program calculates the total due, minimum payment, and interest rate based on the account balance.
-// Problem 2 in IOT Assignment 1
+// Problem 2 in IOT Assignment 1 (Revolvoing Credit Payment Calculator)
 
 void PaymentCalculator() {
     float Balance,totalDue,minPayment,interestRate;
@@ -70,14 +32,16 @@ void PaymentCalculator() {
     printf("Your final balance is: $%.2f\n", Balance);
 }
 
+//=======================================================================================================================
+// This program checks if a number is a perfect square, reverses the number, and calculates
+//Problem 3 in IOT Assignment 1 (Number Manipulation)
 
-//Problem 3 in IOT Assignment 1
-// Function to check if a number is a perfect square
+//1- Function to check if a number is a perfect square
 bool isPerfectSquare(int number) {
     return (number >= 0 && (int)sqrt(number) * (int)sqrt(number) == number);
 }
 
-// Function to reverse a number
+//2- Function to reverse a number
 int ReverseNumber(int number){
     int Reversed = 0;
     while(number != 0) {
@@ -87,7 +51,8 @@ int ReverseNumber(int number){
     }
     return Reversed;
 }
-// Function to calculate the sum of digits of a number
+
+//3- Function to calculate the sum of digits of a number
 int SumOfDigits(int number) {
     int sum = 0;
     while (number != 0) {
@@ -97,6 +62,8 @@ int SumOfDigits(int number) {
     return sum;
 }
 
+//=======================================================================================================================
+//this program compares the price per square inch of two pizzas based on their diameters and prices.
 //Problem 4 in IOT Assignment 1 (Pizza Size Comparison)
 #define M_PI 3.14159265358979323846
 void PizzaSizeComparison() {
@@ -114,13 +81,14 @@ void PizzaSizeComparison() {
     float Area2 = M_PI * (Diameter2 / 2) * (Diameter2 / 2);
     float PricePerSquareInch1 = Price1 / Area1;
     float PricePerSquareInch2 = Price2 / Area2;
+    
     //determine which pizza is a better deal
     if (PricePerSquareInch1 < PricePerSquareInch2) {
         printf("The first pizza is a better deal\n");
     } else if (PricePerSquareInch1 > PricePerSquareInch2) {
         printf("The second pizza is a better deal\n");
     } else {
-        //in case both pizzas have the same price per square inch compare the areas
+        //in case if both pizzas have the same price per square inch compare the areas
         if (Area1 > Area2) {
             printf("The first pizza has a larger area\n");
         } else if (Area1 < Area2) {
@@ -131,6 +99,7 @@ void PizzaSizeComparison() {
     }
 
 }
+//=======================================================================================================================
 int main(void) {
     PizzaSizeComparison();
     return 0;
