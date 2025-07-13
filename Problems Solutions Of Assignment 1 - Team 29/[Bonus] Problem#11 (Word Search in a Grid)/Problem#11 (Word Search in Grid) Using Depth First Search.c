@@ -36,7 +36,11 @@ int exist(char board[3][4], char* word, int rows, int cols) {
     return 0;
 }
 int main() {
-    char board[3][4] = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};     
+    char board[3][4] = {
+    {'A', 'B', 'C', 'E'},
+    {'S', 'F', 'C', 'S'},
+    {'A', 'D', 'E', 'E'}
+};    
     char target[] = "ABCCED";    
 
     int result = exist(board, target, 3, 4);
