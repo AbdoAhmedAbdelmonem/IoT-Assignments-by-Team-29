@@ -18,16 +18,14 @@ A **palindrome** is a string that reads the same forwards and backwards, ignorin
 ## 💡 Examples
 
 ```txt
-Input: "Racecar"
+Input: "racecar"
 Output: Yes, it's a palindrome.
 
-Input: "A man, a plan, a canal: Panama"
+Input: "wollow"
 Output: Yes, it's a palindrome.
 
-Input: "Hello"
+Input: "hello"
 Output: No, it's not a palindrome.
 ```
 ## 🔒Constraints
 - 1 <= input.length <= 1000
-
-- Case-insensitive comparison
