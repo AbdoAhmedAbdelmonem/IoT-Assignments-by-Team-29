@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-    char text[100];
+    char text[1001];
     printf("Type a word: ");
     scanf("%s", text);
 
