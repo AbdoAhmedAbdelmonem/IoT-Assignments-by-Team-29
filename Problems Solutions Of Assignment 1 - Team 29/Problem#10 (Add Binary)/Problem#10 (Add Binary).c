@@ -5,7 +5,7 @@
 char* addBinary(char* a, char* b) {
     int len_a = strlen(a);
     int len_b = strlen(b);
-    int max_len = (len_a > len_b) ? len_a : len_b;
+    int max_len = (len_a >= len_b) ? len_a : len_b;
     
     char* result = malloc(max_len + 2);
     result[max_len + 1] = '\0';
