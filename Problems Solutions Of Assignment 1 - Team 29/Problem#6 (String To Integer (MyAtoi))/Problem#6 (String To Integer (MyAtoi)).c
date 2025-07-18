@@ -1,24 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
-#include <math.h>
 
-int main(int argc, char const *argv[])
-{
-    int a = 0;
-    bool ne = 0;
-    char arr[200];
-    scanf("%s", &arr);
-    // fgets(arr, sizeof(arr), stdin);
-    for(int i = 0; arr[i] != '\0'; i++){
-        if(arr[i] == '-' && i == 0){
-            ne = 1;
-            continue;
-        }else if(arr[i] >= '0' && arr[i] <= '9'){
-            if(arr[i] >= '0' && arr[i] <= '9') a = a * 10 + (int)arr[i] - (char)'0';
-        }else break;
+int Imp_Atoi(const char *s) {
+    int value = 0;
+    bool negative = false;
+
+    for (int i = 0; s[i] != '\0'; ++i) {
+        if (s[i] == '-' && i == 0) {
+            negative = true;
+        } else if (s[i] >= '0' && s[i] <= '9') {
+            value = value * 10 + (s[i] - '0');
+        } else {
+            break;
+        }
     }
-    if(ne) a = -a;
-    printf("%d", a);
+    return negative ? -value : value;
+}
+
+int main(void) {
+    char buf[200];
+    printf("Enter a string to convert to integer: ");
+    scanf("%s", buf);
+    int result = Imp_Atoi(buf);
+    printf("Your Extracted integer is : %d\n", result);
     return 0;
 }
